@@ -20,7 +20,7 @@ code :link, :link code, code :visited, :visited code { color: orangered; }
 
 html, ::before { font: 1em/1.45 Helvetica Neue, sans-serif, Droid Sans Fallback; }
 h1, h2, h3, h4, h5, h6 { text-align: left; text-rendering: optimizeLegibility; text-shadow: white 0 0 2px; }
-h1, h2, h3 { color: #3c790a; background: transparent; }
+h1, h2, h3 { color: #145aa0; background: transparent; }
 h1 { font: 900 200% Helvetica Neue, sans-serif, Droid Sans Fallback; }
 h1.allcaps { font: 900 350% Helvetica Neue, sans-serif, Droid Sans Fallback; letter-spacing: 2px; }
 h2 { font: 800 140% Helvetica Neue, sans-serif, Droid Sans Fallback; }
@@ -91,14 +91,14 @@ pre.css { border: solid 0.0625em; background: #FFFFEE; color: black; padding: 0.
 pre.css:first-line { color: #AAAA50; }
 pre.css::before { content: 'CSS'; }
 
-dl.domintro { position: relative; color: green; background: #DDFFDD; margin: 2em 0 2em 0; padding: 0.5em 1em 0.5em 2em; }
+dl.domintro { position: relative; color: blue; background: #DDFFDD; margin: 2em 0 2em 0; padding: 0.5em 1em 0.5em 2em; }
 hr + dl.domintro, div.impl + dl.domintro, hr + div.status + dl.domintro, div.impl + div.status + dl.domintro { margin-top: 2.5em; margin-bottom: 1.5em; }
 dl.domintro dt, dl.domintro dt * { color: black; text-decoration: none; }
 dl.domintro dd { margin: 0.5em 0 1em 2em; padding: 0; }
 dl.domintro dd p { margin: 0.5em 0; }
-dl.domintro::before { content: 'Note'; background: green; color: white; padding: 0.15em 0.25em; font-style: normal; position: absolute; top: -0.2em; left: -1.5em; transform: rotate(-5deg); }
+dl.domintro::before { content: 'Note'; background: blue; color: white; padding: 0.15em 0.25em; font-style: normal; position: absolute; top: -0.2em; left: -1.5em; transform: rotate(-5deg); }
 
-.note { position: relative; color: green; background: #DDFFDD; font-style: italic; margin-left: 2em; padding-left: 2em; }
+.note { position: relative; color: blue; background: #DDFFDD; font-style: italic; margin-left: 2em; padding-left: 2em; }
 .note em, .note i, .note var { font-style: normal; }
 span.note { padding: 0 2em; }
 .note p:first-child { margin-top: 0; }
