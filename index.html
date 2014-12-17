@@ -12,9 +12,9 @@
 Currently reading: <a href="https://html.spec.whatwg.org/multipage/semantics.html">HTML5 semantics</a> and <br />
 <a href="http://www.slideshare.net/maxdesign/accessible-modal-windows">Accessible Modal Window</a><br />
 
-
-<div><!--start of Open Modal example uses modaldialog1.css-->
-<a href="#openModal">Open Modal</a>
+////
+<div><!--start of Open Modal example one uses modaldialog1.css-->
+<a href="#openModal">Open Modal 1</a>
 
 <div id="openModal" class="modalDialog">
 	<div><!--container div for Modal Box-->
@@ -24,9 +24,24 @@ Currently reading: <a href="https://html.spec.whatwg.org/multipage/semantics.htm
 		<p>Source <a href="http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/">This article</a></p>
 	</div><!--closes container div for Modal Box-->
       </div><!--closes div id="openModal"-->
-    </div><!--closes Open Modal Example using modaldialog1.css-->
-      
-<div><!--start Open Modal Example number two-->
+    </div><!--closes Open Modal Example one using modaldialog1.css-->
+//  /////  
+<div><!--start of Open Modal example one uses modaldialog1.css-->
+<a href="#openModal">Open Modal 2 </a>
+
+<div id="openModal" class="modalDialog">
+	<div><!--container div for Modal Box-->
+		<button title="Close" class="close">X</button>
+		<h2>Modal Box --  But how do you keep focus in the modal?</h2>
+		<p>This is a sample modal box that can be created using the powers of CSS3.</p>
+		<p>Source <a href="http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/">This article</a></p>
+	</div><!--closes container div for Modal Box-->
+      </div><!--closes div id="openModal"-->
+    </div><!--closes Open Modal Example one using modaldialog1.css-->    
+    
+    
+/////      
+<div><!--start Open Modal Example number three-->
 <!-- Declare which IndieUI event(s) this element receives. -->
 <dialog uiactions="dismiss" id="myDialog">
   <!-- Include an optional click trigger for the dismiss action. -->
@@ -58,13 +73,13 @@ Currently reading: <a href="https://html.spec.whatwg.org/multipage/semantics.htm
 
 </script>
 
-</div><!--closes Open Modal example number two-->
+</div><!--closes Open Modal example number three-->
 <h3>Test Content that takes place after Modals</h3>
 <h4>Problems noted:</h4>
 <ul>
-<li>1. When testing with keyboards, focus does not stay in the modal</li>
+<li>1. When testing with keyboards, focus does not stay in the modal. It uses an anchor, so could a solution be to use a button instead?</li>
 <li>2. After closing the modal, the page is returned only to the anchor that closes the button</li>
-<li>3. I have no earthly idea why the second modal isn't showing up</li>
+<li>3. I have no earthly idea why the last modal isn't showing up</li>
 </ul>
 </body>
 </html>
