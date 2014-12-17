@@ -5,6 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" CHARSET="UTF-8">
 <!--<base href="http://red-hound.com/index.html">-->
 <link rel="stylesheet" href="css/specification.css">
+<link rel="stylesheet" href="css/modaldialog1.css">
 <title>GitHub Pages for Red Hound</title>
 </head>
 <body>
@@ -12,18 +13,19 @@ Currently reading: <a href="https://html.spec.whatwg.org/multipage/semantics.htm
 <a href="http://www.slideshare.net/maxdesign/accessible-modal-windows">Accessible Modal Window</a><br />
 
 
-<div><!--start of Open Modal example-->
+<div><!--start of Open Modal example uses modaldialog1.css-->
 <a href="#openModal">Open Modal</a>
 
 <div id="openModal" class="modalDialog">
-	<div>
+	<div><!--container div for Modal Box-->
 		<a href="#close" title="Close" class="close">X</a>
 		<h2>Modal Box</h2>
 		<p>This is a sample modal box that can be created using the powers of CSS3.</p>
 		<p>Source <a href="http://www.webdesignerdepot.com/2012/10/creating-a-modal-window-with-html5-and-css3/">This article</a></p>
-	</div>
-</div>
-</div><!--closes Open Modal Example-->
+	</div><!--closes container div for Modal Box-->
+      </div><!--closes div id="openModal"-->
+    </div><!--closes Open Modal Example using modaldialog1.css-->
+      
 <div><!--start Open Modal Example number two-->
 <!-- Declare which IndieUI event(s) this element receives. -->
 <dialog uiactions="dismiss" id="myDialog">
