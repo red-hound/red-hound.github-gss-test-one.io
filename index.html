@@ -10,6 +10,35 @@
 <body>
 Currently reading: <a href="https://html.spec.whatwg.org/multipage/semantics.html">HTML5 semantics</a> and <br />
 <a href="http://www.slideshare.net/maxdesign/accessible-modal-windows">Accessible Modal Window</a>
+<!-- Declare which IndieUI event(s) this element receives. -->
+<dialog uiactions="dismiss" id="myDialog">
+  <!-- Include an optional click trigger for the dismiss action. -->
+					  	  <button uitrigger="dismiss"> Cancel </button>
+  ... other dialog contents ...
+</dialog>
+
+<script type="text/javascript">
+  
+  var myDialog = document.getElementById("myDialog");
+  						
+  // At some point during runtime, the handler will be called.
+  // For example, if the user presses ESC key while focus is inside the dialog.
+  function dismissHandler(e) {
+  
+    // Cancel and close the dialog. Don't forget to move focus before closing.
+    closeDialog(e.receiver); // Event.receiver is a readonly property like Event.target 
+    
+    // Then cancel the event.
+    e.stopPropagation(); // Stop the event from bubbling.
+    e.preventDefault(); // Let the UA/AT know the event was intercepted successfully.
+
+  }
+
+  // Register the event at initialization.
+  // Either on the receiver itself, or on an ancestor element like the body. 
+  myDialog.addEventListener("dismissrequest", dismissHandler);
+
+</script>
 
 
 
