@@ -1,5 +1,5 @@
 @charset "utf-8";
-.onView {padding:4px; width:30px; background:#999; border:#333 solid; border-width:2px;}
+.onView {padding:4px; width:30em; background:#3399ff; border:#333 solid; border-width:2px;}
 .offView { display:none;}
 .viewBox {
 width:100%;
@@ -7,7 +7,7 @@ height:100%;
 float:center;
 position:relative;
 z-index:100;
-background-color:#999999;
+background-color:#ccffff;
 top:0px; left:0px; right:0px; display:none;
 opacity: .80; }
 .content {
