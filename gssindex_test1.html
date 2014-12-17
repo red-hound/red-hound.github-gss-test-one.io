@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" CHARSET="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="initial-scale=1.0">
+
+<link rel="stylesheet" href="style/styles.css">
+<link rel="stylesheet" href="style/pygments.css">
+<title>GitHub Pages for playing with GSS</title>
+</head>
+<body>
+    <script>
+    GSS_CONFIG = {
+      worker: "/bower_components/gss/dist/worker.js",
+      defaultStrength: "weak",
+      fractionalPixels: false
+    }
+    </script>
+    <script src="/bower_components/gss/dist/gss.js"></script>        
+    <script src="/js/script.js"></script>
+    <script src="/js/vendor/classie.js"></script>
+    
+<style type="text/gss">
+
+    [Wwin] == ::window[width] == body[width] !require;
+    [Hwin] == ::window[height] == body[height] !require;
+
+    [breakpoint1] == 900 !require;
+    
+    [content-right] == ::window[center-x] + [max-p-width] / 2 !require;
+    [content-left] == ::window[center-x] - [max-p-width] / 2 !require;
+
+    @if [Wwin] >= [breakpoint1] {
+      [baseline] == 30 !require;
+      [top-margin] == [baseline] * 4 !require;
+      [bottom-margin] == [baseline] * 4 !require;
+      [col-size] == [Wwin] / 12 !strong;
+      [col-size] <= 72 !require;
+      [max-p-width] == 720 !require;      
+      [title-font-size] == 65 !require;
+      [subtitle-font-size] == 18 !require;
+      [content-font-size] == 20 !require;
+      [button-font-size] == 26 !require;
+      [large-content-font-size] == 24 !require;
+      [large-content-line-height] == 36 !require;
+      
+    } @else {
+      [baseline] == 24 !require;
+      [top-margin] == [baseline] * 3 !require;
+      [bottom-margin] == [baseline] * 2 !require;
+      [col-size] == [Wwin] / 6 !require;
+      [max-p-width] == [col-size] * 5 !require;
+      [title-font-size] == 35 !require;
+      [subtitle-font-size] == 14 !require;
+      [content-font-size] == 16 !require;
+      [button-font-size] == 20 !require;
+      [large-content-font-size] == 20 !require;
+      [large-content-line-height] == 30 !require;
+    }
+    
+    button, .button {
+      font-size: == [button-font-size];
+    }
+    
+    @vertical section;
+
+    section {
+      overflow: hidden;
+      top: >= ::window[top];
+  
+      /*height: >= 500;*/
+      @horizontal |[::]| in(::window) !require;    
+  
+  
+      header {
+        
+        height: == ::[intrinsic-height] !require;
+        top: == ::parent[top] + [top-margin] !strong;        
+        @horizontal |-[::]-| in(::parent) gap([col-size]);    
+    
+        /* bridge vars b/c no floats */
+        bottom: == ::parent[title-bottom];
+        /*bottom: <= ::parent[bottom] - [top-margin];*/
+    
+        h2 {
+          font-size: == [subtitle-font-size];          
+        }
+        h1 {
+          font-size: == [title-font-size];
+          margin-bottom: == [baseline] / 2;
+        }
+      }
+  
+      .content h2 {
+        font-size: == [subtitle-font-size] * 1.9;
+        padding: == [baseline];
+        margin-top: == [baseline] * 2;
+      }
+  
+      
+  
+      .content {
+        bottom: <= ::parent[bottom] - [bottom-margin] !medium;
+        
+        font-size: == [content-font-size];
+        line-height: == [baseline];
+        top: == ::parent[title-bottom] + [baseline];
+        height: == ::[intrinsic-height];
+        width: <= [max-p-width];
+        center-x: == ::parent[center-x] !medium;
+        x: == ::[content-left];
+      }
+  
+      p, blockquote, pre, h2, ul, ol {
+        margin-bottom: == [baseline];
+      }  
+  
+    }
+    
+    
+    .cols-2 {
+      -webkit-column-count: 2;
+         -moz-column-count: 2;
+              column-count: 2;
+      -webkit-column-gap: == [baseline];
+         -moz-column-gap: == [baseline];
+              column-gap: == [baseline];
+    }
+    
+    ul.large-list {                
+      li {        
+        margin-bottom: == [large-content-font-size];
+        text-align: left;                      
+      }
+    }
+    
+    .large-font, .large-list li {
+      font-family: "adelle", georgia, serif;
+      font-size: == [large-content-font-size];
+      line-height: == [large-content-line-height];
+    }
+
+</style>  
+Okay the above did not work.  Let's try something else.
+    
+<h1>Test of style h1 tag</h1>
+<h2>Test of style h2 tag</h2>
+<h3>Test of style h3 tag</h3>
+<h4>Test of style h4 tag</h4>
+<h5>Test of style h5 tag</h5>
+<h6>Test of style h6 tag</h6>
+
+  </body>
+  </html>
