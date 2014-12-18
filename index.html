@@ -79,17 +79,13 @@
   }
   
   #b3[center-x] == #panel[center-x];
-  #b32[center-x] == #panel2[center-x];
+
   
   @horizontal |-[#b1]-[#b2]~-~[#b3]~-~[#b4]-|
     in(#panel)
     gap([gap])
     chain-top !require;  
       @horizontal |-[#b1]-[#b2]~-~[#b3]~-~[#b4]-|
-    in(#panel2)
-    gap([gap])
-    chain-top !require; 
-     @horizontal |-[#b12]-[#b22]~-~[#b32]~-~[#b42]-|
     
   /* rules */
   
@@ -106,14 +102,6 @@
       in(#inner-panel)
       gap(2);
       
-    
-    @horizontal |-[::]|
-      in(#inner-panel2)
-      gap([gap]);
-
-    @vertical |-[::]-|
-      in(#inner-panel2)
-      gap(2);
   }      
     
     
