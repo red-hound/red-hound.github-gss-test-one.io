@@ -25,7 +25,7 @@
     </script>
     <script src="/bower_components/gss/dist/gss.js"></script> 
 <div id="htags-panel"></div>
-<div class="inner-panel" id="htags-panel"></div>
+<div class="htags-panel" id="htags-panel"></div>
 <h1>Test of style h1 tag</h1>
 <h2>Test of style h2 tag</h2>
 <h3>Test of style h3 tag</h3>
@@ -65,6 +65,21 @@ gap([gap]);
 @vertical |-[#inner-panel]-[#b1]-|
 in(#htags-panel)
 gap([gap]);
+
+
+  /* buttons htags-panel*/
+  
+  button {
+    width: == ::[intrinsic-width] !require;
+    height: == ::[intrinsic-height] !require;
+  }
+  
+  #h3b[center-x] == #htags-panel[center-x];
+  
+  @horizontal |-[#h1b]-[#h2b]~-~[#h3b]~-~[#h4b]-|
+    in(#htags-panel)
+    gap([gap])
+    chain-top !require;  
   
   /* panel */
   
