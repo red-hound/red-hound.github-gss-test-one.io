@@ -48,39 +48,7 @@
     
   [gap] == 18 !require;
   
-  /* htags-panel */
-  
-    #htags-panel {
-    width: == ::window[width] - 480;
-    width: <= 720;
-    height: == ::window[height] - 480;
-    height: <= 360 !require;
-    height: >= 300 !require;
-    center-x: == ::window[center-x];
-    center-y: == ::window[center-y];
-  }  
-@horizontal |-[#inner-panel]-|
-in(#htags-panel)
-gap([gap]);
-@vertical |-[#inner-panel]-[#b1]-|
-in(#htags-panel)
-gap([gap]);
 
-
-  /* buttons htags-panel*/
-  
-  button {
-    width: == ::[intrinsic-width] !require;
-    height: == ::[intrinsic-height] !require;
-  }
-  
-  #h3b[center-x] == #htags-panel[center-x];
-  
-  @horizontal |-[#h1b]-[#h2b]~-~[#h3b]~-~[#h4b]-|
-    in(#htags-panel)
-    gap([gap])
-    chain-top !require;  
-  
   /* panel */
   
   #panel {
