@@ -24,8 +24,8 @@
     }
     </script>
     <script src="/bower_components/gss/dist/gss.js"></script> 
-<div id="panel"></div>
-<div class="inner-panel" id="inner-panel"></div>
+<div id="panel2"></div>
+<div class="inner-panel2" id="inner-panel2"></div>
 <h1>Test of style h1 tag</h1>
 <h2>Test of style h2 tag</h2>
 <h3>Test of style h3 tag</h3>
@@ -37,7 +37,6 @@
 <button id="b42" class="btn">h3 Button</button>
 <button id="b32" class="btn btn-primary">h4 Button</button>
 
-/*  above is new panel */
 
 <div id="panel"></div>
 <div class="inner-panel" id="inner-panel"></div>
@@ -101,6 +100,61 @@
       in(#inner-panel)
       gap(2);
   }      
+    
+    /*panel two*/
+    
+   
+  /* copy of panel with two added as a suffix */
+  
+  #panel2 {
+    width: == ::window[width] - 480;
+    width: <= 720;
+    height: == ::window[height] - 480;
+    height: <= 360 !require;
+    height: >= 300 !require;
+    center-x: == ::window[center-x];
+    center-y: == ::window[center-y];
+  }  
+    
+  @horizontal |-[#inner-panel2]-|
+    in(#panel2)
+    gap([gap]);
+
+  @vertical |-[#inner-panel2]-[#b1]-|
+    in(#panel2)
+    gap([gap]);
+  
+  /* buttons */
+  
+  button {
+    width: == ::[intrinsic-width] !require;
+    height: == ::[intrinsic-height] !require;
+  }
+  
+  #b32[center-x] == #panel2[center-x];
+  
+  @horizontal |-[#b12]-[#b22]~-~[#b32]~-~[#b42]-|
+    in(#panel2)
+    gap([gap])
+    chain-top !require;  
+    
+  /* rules */
+  
+  #rules {
+    display:block;
+    white-space: pre;
+    overflow-y: scroll;
+    
+    @horizontal |-[::]|
+      in(#inner-panel2)
+      gap([gap]);
+
+    @vertical |-[::]-|
+      in(#inner-panel2)
+      gap(2);
+  }      
+     
+    
     
 </style>
       
