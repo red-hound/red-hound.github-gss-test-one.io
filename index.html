@@ -84,6 +84,11 @@
     in(#panel)
     gap([gap])
     chain-top !require;  
+      @horizontal |-[#b1]-[#b2]~-~[#b3]~-~[#b4]-|
+    in(#panel2)
+    gap([gap])
+    chain-top !require; 
+     @horizontal |-[#b12]-[#b22]~-~[#b32]~-~[#b42]-|
     
   /* rules */
   
@@ -99,8 +104,6 @@
     @vertical |-[::]-|
       in(#inner-panel)
       gap(2);
-      
-      
       
     
     @horizontal |-[::]|
