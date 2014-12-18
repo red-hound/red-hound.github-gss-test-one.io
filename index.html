@@ -101,59 +101,6 @@
       gap(2);
   }      
     
-    /*panel two*/
-
-   
-  /* copy of panel with two added as a suffix */
-  
-  #panel2 {
-    width: == ::window[width] - 480;
-    width: <= 720;
-    height: == ::window[height] - 480;
-    height: <= 360 !require;
-    height: >= 300 !require;
-    center-x: == ::window[center-x];
-    center-y: == ::window[center-y];
-  }  
-    
-  @horizontal |-[#inner-panel2]-|
-    in(#panel2)
-    gap([gap]);
-
-  @vertical |-[#inner-panel2]-[#b1]-|
-    in(#panel2)
-    gap([gap]);
-  
-  /* buttons */
-  
-  button {
-    width: == ::[intrinsic-width] !require;
-    height: == ::[intrinsic-height] !require;
-  }
-  
-  #b32[center-x] == #panel2[center-x];
-  
-  @horizontal |-[#b12]-[#b22]~-~[#b32]~-~[#b42]-|
-    in(#panel2)
-    gap([gap])
-    chain-top !require;  
-    
-  /* rules */
-  
-  #rules {
-    display:block;
-    white-space: pre;
-    overflow-y: scroll;
-    
-    @horizontal |-[::]|
-      in(#inner-panel2)
-      gap([gap]);
-
-    @vertical |-[::]-|
-      in(#inner-panel2)
-      gap(2);
-  }      
-     
     
     
 </style>
