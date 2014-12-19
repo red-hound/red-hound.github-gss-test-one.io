@@ -47,6 +47,20 @@
    @horizontal |-[#inner-panel0]-|
     in(#panel0)
     gap([gap]);
+    
+#rules0 {
+    display:block;
+    white-space: pre;
+    overflow-y: scroll;
+    
+    @horizontal |-[::]|
+      in(#inner-panel0)
+      gap([gap]);
+
+    @vertical |-[::]-|
+      in(#inner-panel0)
+      gap(2);
+  } 
  
  
  </style>
