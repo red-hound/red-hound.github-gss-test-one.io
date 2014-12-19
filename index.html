@@ -22,8 +22,32 @@
       verticalScroll: false
     }
     </script>
-    <script src="/bower_components/gss/dist/gss.js"></script>  
-
+    <script src="/bower_components/gss/dist/gss.js"></script>
+    <div id="panel0"></div>
+<div class="inner-panel" id="inner-panel0">
+<h3><a href="http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">Link Test in inner-panel</a></h3>
+<h3 tabindex="0">Tab-index "0" Test in inner-panel</h3>
+</div>
+ <style id="rules" type="text/gss" contenteditable>
+  /* vars */
+    
+  [gap] == 18 !require;
+  
+  /* panel */
+  
+  #panel0 {
+    width: == ::window[width] - 480;
+    width: <= 720;
+    height: == ::window[height] - 480;
+    height: <= 360 !require;
+    height: >= 300 !require;
+    center-x: == ::window[center-x];
+    center-y: == ::window[center-y];
+  } 
+ 
+ 
+ 
+ </style>
 <div id="panel"></div>
 
 <div class="inner-panel" id="inner-panel">
