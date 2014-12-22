@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" CHARSET="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="initial-scale=1.0">
+  
+<link rel="stylesheet" href="css/specification.css">
+<link rel="stylesheet" href="/assets/grail_bootstrap/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="/assets/grail_bootstrap/css/texture.css" type="text/css">
+
+<title>Sandbox for GSS</title>
+</head>
+<body>
+      <script>
+    GSS_CONFIG = {
+      worker: "/bower_components/gss/dist/worker.js",
+      fractionalPixels: false,
+      resizeDebounce: 16, // (ms)
+      debug: false,
+      verticalScroll: false
+    }
+    </script>
+    <script src="/bower_components/gss/dist/gss.js"></script>
+    <div style="width:25%;color:#fff;background:#000;height:100%;">Test<br />
+        <a href="https://www.youtube.com/watch?v=VkTCL6Nqm6Y">OSCON 2014: How Instagram Works</a>
+    </div><!--black side bar on left-->
+    
+<div id="panel"></div>
+
+<div class="inner-panel" id="inner-panel">
+ <h4><a href="http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">Link Test: Receives Focus</a></h4>
+ <h4 tabindex="0">Tab-index "0" Test: Receives focus</h4>
+ <h4 tabindex="-1">Tab-index "-1" Test: Does not receive focus. </h4>
+</div>
+<button id="b1" class="btn">Button One</button>
+<button id="b2" class="btn">Button Two</button>
+<button id="b4" class="btn">Button Four</button>
+<button id="b3" class="btn btn-primary">Button Three</button>
+<button id="b3b" class="btn">Button Five</button>
+ <style id="rules" type="text/gss" contenteditable>
+ 
+ 
+ 
+  
+ /* Test this text is showing up inside the panel division and honors line numbers */
+ /*Note One: button four receives focus before button three because its code order.  After tabbing through buttons, focus goes to an inner screen--where is the source order coming from?  Possibly focus went to scroll bar*/
+ /* Note Two: If given a value of "-1", the element can't be tabbed to but focus can be given to the element programmatically (using element.focus()).*/ 
+ 
+  /* vars */
+    
+  [gap] == 18 !require;
+  
+  /* panel */
+  
+  #panel {
+    background: #000;
+    width: == ::window[width] - 480;
+    width: <= 720;
+    height: == ::window[height] - 480;
+    height: <= 360 !require;
+    height: >= 300 !require;
+    center-x: == ::window[center-x];
+    center-y: == ::window[center-y];
+  }  
+    
+  @horizontal |-[#inner-panel]-|
+    in(#panel)
+    gap([gap]);
+
+  @vertical |-[#inner-panel]-[#b1]-|
+    in(#panel)
+    gap([gap]);
+  
+  /* buttons */
+  
+  button {
+    width: == ::[intrinsic-width] !require;
+    height: == ::[intrinsic-height] !require;
+  }
+  
+  #b3[center-x] == #panel[center-x];
+  
+  @horizontal |-[#b1]-[#b2]~-~[#b3]~-~[#b4]~-~[#b3b]-|
+    in(#panel)
+    gap([gap])
+    chain-top !require;  
+    
+  /* rules */
+  
+  #rules {
+    display:block;
+    white-space: pre;
+    overflow-y: scroll;
+    
+    @horizontal |-[::]|
+      in(#inner-panel)
+      gap([gap]);
+
+    @vertical |-[::]-|
+      in(#inner-panel)
+      gap(2);
+  }      
+     
+</style>
+        
+  </body>
+  </html>
