@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" CHARSET="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="viewport" content="initial-scale=1.0">
+
+<link rel="stylesheet" href="css/specification.css">
+<link rel="stylesheet" href="/assets/grail_bootstrap/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="/assets/grail_bootstrap/css/texture.css" type="text/css">
+
+<title>Sandbox for GSS</title>
+</head>
+<body>
+      <script>
+    GSS_CONFIG = {
+      worker: "/bower_components/gss/dist/worker.js",
+      fractionalPixels: false,
+      resizeDebounce: 16, // (ms)
+      debug: false,
+      verticalScroll: false
+    }
+    </script>
+    <script src="/bower_components/gss/dist/gss.js"></script>
+    <div style="width:100%;background:red;height:500px;">Test</div>
+    <div id="panel0"></div>
+<div class="inner-panel0" id="inner-panel0">
+<h3><a href="http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">Link Test in inner-panel panel0</a></h3>
+<h3 tabindex="0">Tab-index "0" Test in inner-panel panel0</h3>
+</div>
+ <style id="rules0" type="text/gss" contenteditable>
+  /* vars */
+    
+  [gap] == 18 !require;
+  
+  /* panel0 */
+  
+  #panel0 {
+    width: == ::window[width] - 480;
+    width: <= 720;
+    height: == ::window[height] - 480;
+    height: <= 360 !require;
+    height: >= 300 !require;
+    center-x: == ::window[center-x];
+    center-y: == ::window[center-y];
+  } 
+   @horizontal |-[#inner-panel0]-|
+    in(#panel0)
+    gap([gap]);
+    
+#rules0 {
+    display:block;
+    white-space: pre;
+    overflow-y: scroll;
+    
+    @horizontal |-[::]|
+      in(#inner-panel0)
+      gap([gap]);
+
+    @vertical |-[::]-|
+      in(#inner-panel0)
+      gap(2);
+  } 
+ 
+ 
+ </style>
+<div id="panel"></div>
+
+<div class="inner-panel" id="inner-panel">
+ <h3><a href="http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">Link Test in inner-panel panel</a></h3>
+ <h3 tabindex="0">Tab-index "0" Test in inner-panel panel</h3>
+</div>
+<button id="b1" class="btn">Share...</button>
+<button id="b2" class="btn">Add</button>
+<button id="b4" class="btn">Remove</button>
+<button id="b3" class="btn btn-primary">Change Mode</button>
+ <style id="rules" type="text/gss" contenteditable>
+  
+  /* vars */
+    
+  [gap] == 18 !require;
+  
+  /* panel */
+  
+  #panel {
+    width: == ::window[width] - 480;
+    width: <= 720;
+    height: == ::window[height] - 480;
+    height: <= 360 !require;
+    height: >= 300 !require;
+    center-x: == ::window[center-x];
+    center-y: == ::window[center-y];
+  }  
+    
+  @horizontal |-[#inner-panel]-|
+    in(#panel)
+    gap([gap]);
+
+  @vertical |-[#inner-panel]-[#b1]-|
+    in(#panel)
+    gap([gap]);
+  
+  /* buttons */
+  
+  button {
+    width: == ::[intrinsic-width] !require;
+    height: == ::[intrinsic-height] !require;
+  }
+  
+  #b3[center-x] == #panel[center-x];
+  
+  @horizontal |-[#b1]-[#b2]~-~[#b3]~-~[#b4]-|
+    in(#panel)
+    gap([gap])
+    chain-top !require;  
+    
+  /* rules */
+  
+  #rules {
+    display:block;
+    white-space: pre;
+    overflow-y: scroll;
+    
+    @horizontal |-[::]|
+      in(#inner-panel)
+      gap([gap]);
+
+    @vertical |-[::]-|
+      in(#inner-panel)
+      gap(2);
+  }      
+    
+</style>
+      
+  </body>
+  </html>
