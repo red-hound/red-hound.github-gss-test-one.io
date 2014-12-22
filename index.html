@@ -27,66 +27,7 @@
         <a href="https://www.youtube.com/watch?v=VkTCL6Nqm6Y">OSCON 2014: How Instagram Works</a>
         
     </div><!--black side bar on left-->
-    <div id="panel0"></div>
-<div class="inner-panel0" id="inner-panel0">
-<h3><a href="http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">Link Test in inner-panel panel0</a></h3>
-<h3 tabindex="0">Tab-index "0" Test in inner-panel panel0</h3>
-</div>
-<button id="b10" class="btn">Share0...</button>
-<button id="b20" class="btn">Add0</button>
-<button id="b40" class="btn">Remove0</button>
-<button id="b30" class="btn btn-primary">Change Mode0</button>
- <style id="rules0" type="text/gss" contenteditable>
-  /* vars */
     
-  [gap] == 18 !require;
-  
-  /* panel0 */
-  
-  #panel0 {
-    width: == ::window[width] - 480;
-    width: <= 720;
-    height: == ::window[height] - 480;
-    height: <= 360 !require;
-    height: >= 300 !require;
-    center-x: == ::window[center-x];
-    center-y: == ::window[center-y];
-  } 
-   @horizontal |-[#inner-panel0]-|
-    in(#panel0)
-    gap([gap]);
-    
-#rules0 {
-    display:block;
-    white-space: pre;
-    overflow-y: scroll;
-    
-    @horizontal |-[::]|
-      in(#inner-panel0)
-      gap([gap]);
-
-    @vertical |-[::]-|
-      in(#inner-panel0)
-      gap(2);
-      
-      
-        /* buttons0 */
-  
-  button {
-    width: == ::[intrinsic-width] !require;
-    height: == ::[intrinsic-height] !require;
-  }
-  
-  #b30[center-x] == #panel0[center-x];
-  
-  @horizontal |-[#b10]-[#b20]~-~[#b30]~-~[#b40]-|
-    in(#panel0)
-    gap([gap])
-    chain-top !require;  
-  } 
- 
- 
- </style>
 <div id="panel"></div>
 
 <div class="inner-panel" id="inner-panel">
