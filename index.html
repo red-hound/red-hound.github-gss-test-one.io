@@ -45,7 +45,6 @@ document.getElementById('tab-span').focus();
 <button id="b2" class="btn">Button Two</button>
 <button id="b4" class="btn">Button Four</button>
 <button id="b3" class="btn btn-primary">Button Three</button>
-<button id="b3b" class="btn">Button Five</button>
 <style id="rules" type="text/gss" contenteditable>
  
  
@@ -65,8 +64,8 @@ document.getElementById('tab-span').focus();
   #panel {
     background: #000;
     width: == ::window[width] - 480;
-    width: <= 420;
-    height: == ::window[height] - 180;
+    width: <= 720;
+    height: == ::window[height] - 80;
     height: <= 760 !require;
     height: >= 300 !require;
     center-x: == ::window[center-x];
@@ -90,7 +89,7 @@ document.getElementById('tab-span').focus();
   
   #b3[center-x] == #panel[center-x];
   
-  @horizontal |-[#b1]-[#b2]~-~[#b3]~-~[#b4]~-~[#b3b]-|
+  @horizontal |-[#b1]-[#b2]~-~[#b3]~-~[#b4]-|
     in(#panel)
     gap([gap])
     chain-top !require;  
