@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" CHARSET="UTF-8">
@@ -31,13 +31,16 @@
         <h5>Receives visual indicator on mouseover</h5>
         <h5 tabindex="0">Tab-index "0" Test: Receives tab focus no mouse focus</h5>
         <h5 tabindex="-1">Tab-index "-1" Test: No tab or mouse focus</h5>
-        <h5 tabindex="-1" id="tab-span"> Tab index "-1" Test with Javascript: No tab or mouse focus</h5>
+        <h5 tabindex="-1" id="tab-span-a"> Tab index "-1" Test with Javascript: No tab or mouse focus</h5>
         <h5 tabindex="0">Second Tab-index "0" Test: Receives tab focus no mouse focus</h5>
         <h4>Testing with JAWS 16</h4>
     </div><!--black side bar on left-->
 <script>
-function setFocusToTextBox(){
-document.getElementById('tab-span').focus();
+function setFocusToTextBoxa(){
+document.getElementById('tab-span-a').focus();
+}
+function setFocusToTextBoxb(){
+document.getElementById('tab-span-b').focus();
 }
 </script>
 
@@ -47,7 +50,7 @@ document.getElementById('tab-span').focus();
  <h4><a href="http://www.w3.org/TR/html5/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">Link Test: Receives tab focus no mouse focus</a></h4>
  <h4 tabindex="0">Tab-index "0" Test: Receives tab focus no mouse focus</h4>
  <h4 tabindex="-1">Tab-index "-1" Test: No tab or mouse focus</h4>
- <h4 tabindex="-1" id="tab-span"> Tab index "-1" Test with Javascript: No tab or mouse focus</h4>
+ <h4 tabindex="-1" id="tab-span-b"> Tab index "-1" Test with Javascript: No tab or mouse focus</h4>
  <h4 tabindex="0">Second Tab-index "0" Test: Receives tab focus no mouse focus</h4>
 </div>
 <button id="b1" class="btn">Button One</button>
